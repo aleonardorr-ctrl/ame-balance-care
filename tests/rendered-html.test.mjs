@@ -34,4 +34,10 @@ test("ships the direct-entry and professional export capabilities", async () => 
   assert.match(page, /Secreción por fístula/);
   assert.match(page, /Aspirado nasogástrico/);
   assert.match(page, /filas separadas conservando la misma hora/);
+  assert.match(page, /baselineInsensible/);
+  assert.match(page, /feverInsensible/);
+  assert.match(page, /Temperatura máxima/);
+  assert.match(page, /Frecuencia respiratoria/);
+  assert.match(page, /Quemaduras o piel abierta/);
+  assert.match(page, /Balance ajustado estimado/);
 });
