@@ -30,4 +30,8 @@ test("ships the direct-entry and professional export capabilities", async () => 
   assert.match(page, /window\.print/);
   assert.match(page, /freeLimit = 12/);
   assert.match(page, /\/api\/balances/);
+  assert.match(page, /Heces líquidas o cuantificadas/);
+  assert.match(page, /Secreción por fístula/);
+  assert.match(page, /Aspirado nasogástrico/);
+  assert.match(page, /filas separadas conservando la misma hora/);
 });
