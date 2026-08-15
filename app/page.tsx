@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as XLSX from "xlsx";
 import { Activity, ArrowDownToLine, BookOpen, Check, ChevronRight, Clock3, Crown, Database, Download, Droplets, FileSpreadsheet, FileText, Languages, LockKeyhole, Plus, Printer, RefreshCw, ShieldCheck, Sparkles, Trash2, UploadCloud, UserRound } from "lucide-react";
 
@@ -55,6 +55,8 @@ export default function Home() {
   const additionalInsensible=Math.max(0,Number(clinical.additionalInsensible)||0);
   const estimatedInsensible=Math.round(baselineInsensible+feverInsensible+additionalInsensible);
   const adjustedBalance=result.balance-estimatedInsensible;
+
+  useEffect(()=>{ if(new URLSearchParams(window.location.search).get("plan")==="pro") setPlan("pro"); },[]);
 
   function calculateMovements(items:Movement[]) {
     const intake=items.filter(item=>item.type==="Ingreso").reduce((sum,item)=>sum+item.volume,0);

@@ -40,3 +40,6 @@ yarn-error.log*
 /work/
 /spreadsheet_work/
 /.devserver.*.log
+/android-app/.gradle/
+/android-app/build/
+/android-app/app/build/
