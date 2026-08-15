@@ -74,7 +74,7 @@ export default function Home() {
   }
 
   async function loadHistory() {
-    if(plan!=="pro") return;
+    if(plan!=="pro") { setHistoryMessage("El historial acumulado está disponible en AME Pro."); document.getElementById("planes")?.scrollIntoView({behavior:"smooth"}); return; }
     if (!admissionId.trim()) return;
     setHistoryMessage("");
     const response = await fetch(`/api/balances?admissionId=${encodeURIComponent(admissionId.trim())}`);
@@ -84,7 +84,7 @@ export default function Home() {
   }
 
   async function saveDay() {
-    if(plan!=="pro") return;
+    if(plan!=="pro") { setHistoryMessage("Guardar balances diarios está disponible en AME Pro."); document.getElementById("planes")?.scrollIntoView({behavior:"smooth"}); return; }
     if (!admissionId.trim() || !fileName || !/^\d{4}-\d{2}-\d{2}$/.test(result.date)) return;
     const response = await fetch("/api/balances", { method:"POST", headers:{"content-type":"application/json"}, body:JSON.stringify({admissionId:admissionId.trim(),patientLabel:result.patient,balanceDate:result.date,intakeMl:result.intake,outputMl:result.output,balanceMl:result.balance,urineMlKgH:result.urine,recordCount:result.records}) });
     if (response.ok) { setHistoryMessage(e.saved); await loadHistory(); }
