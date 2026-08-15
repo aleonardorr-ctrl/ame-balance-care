@@ -13,16 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BalanceCare | Balance hídrico de enfermería",
+  title: "AME Balance Care | Balance hídrico de enfermería",
   description: "Plantilla Excel, análisis automático y reporte visual de balance hídrico para enfermería.",
   openGraph: {
-    title: "BalanceCare | Menos cálculo. Más tiempo para cuidar.",
+    title: "AME Balance Care | Menos cálculo. Más tiempo para cuidar.",
     description: "Balance hídrico de enfermería con plantilla Excel, análisis automático y reporte terminado.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "BalanceCare, balance hídrico de enfermería" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "AME Balance Care, balance hídrico de enfermería" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BalanceCare | Balance hídrico de enfermería",
+    title: "AME Balance Care | Balance hídrico de enfermería",
     description: "Menos cálculo. Más tiempo para cuidar.",
     images: ["/og.png"],
   },
