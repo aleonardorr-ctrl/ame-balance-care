@@ -13,11 +13,13 @@ import android.webkit.JavascriptInterface;
 import android.webkit.CookieManager;
 import android.webkit.DownloadListener;
 import android.webkit.ValueCallback;
+import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
     private WebView webView;
@@ -45,6 +47,12 @@ public class MainActivity extends Activity {
             }
         });
         webView.setWebChromeClient(new WebChromeClient() {
+            @Override public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
+                Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
+                result.confirm();
+                return true;
+            }
+
             @Override public boolean onShowFileChooser(WebView view, ValueCallback<Uri[]> callback, FileChooserParams params) {
                 if (fileCallback != null) fileCallback.onReceiveValue(null);
                 fileCallback = callback;
@@ -83,16 +91,16 @@ public class MainActivity extends Activity {
                     ContentValues values = new ContentValues();
                     values.put(MediaStore.Downloads.DISPLAY_NAME, name);
                     values.put(MediaStore.Downloads.MIME_TYPE, mime);
-                    values.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/AME Balance Care");
+                    values.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/AME Balance Care/Balance Hidrico");
                     Uri uri = getContentResolver().insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values);
                     if (uri != null) try (java.io.OutputStream out = getContentResolver().openOutputStream(uri)) { if (out != null) out.write(bytes); }
                 } else {
                     java.io.File dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
                     try (java.io.FileOutputStream out = new java.io.FileOutputStream(new java.io.File(dir, name))) { out.write(bytes); }
                 }
-                    runOnUiThread(() -> android.widget.Toast.makeText(MainActivity.this, "Guardado en Descargas/AME Balance Care Basic", android.widget.Toast.LENGTH_LONG).show());
+                runOnUiThread(() -> Toast.makeText(MainActivity.this, "Guardado en Descargas/AME Balance Care/Balance Hidrico", Toast.LENGTH_LONG).show());
             } catch (Exception error) {
-                runOnUiThread(() -> android.widget.Toast.makeText(MainActivity.this, "No se pudo guardar el archivo", android.widget.Toast.LENGTH_LONG).show());
+                runOnUiThread(() -> Toast.makeText(MainActivity.this, "No se pudo guardar el archivo", Toast.LENGTH_LONG).show());
             }
         }
     }
