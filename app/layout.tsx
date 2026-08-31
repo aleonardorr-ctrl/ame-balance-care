@@ -13,17 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AME Balance Care | Balance hídrico de enfermería",
-  description: "Plantilla Excel, análisis automático y reporte visual de balance hídrico para enfermería.",
+  title: "AME Balance Care | Nursing fluid balance",
+  description: "Four-language nursing fluid balance app with bibliography, clinical disclaimer, workbook export and cumulative history.",
   openGraph: {
-    title: "AME Balance Care | Menos cálculo. Más tiempo para cuidar.",
-    description: "Balance hídrico de enfermería con plantilla Excel, análisis automático y reporte terminado.",
+    title: "AME Balance Care | Less calculation. More time to care.",
+    description: "Nursing fluid balance with workbook import, automatic analysis, bibliography and cumulative hospitalization history.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "AME Balance Care, balance hídrico de enfermería" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AME Balance Care | Balance hídrico de enfermería",
-    description: "Menos cálculo. Más tiempo para cuidar.",
+    title: "AME Balance Care | Nursing fluid balance",
+    description: "Four-language nursing fluid balance with bibliography and cumulative history.",
     images: ["/og.png"],
   },
   icons: {
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
