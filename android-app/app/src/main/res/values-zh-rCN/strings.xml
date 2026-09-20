@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AME 液体平衡</string>
+    <string name="file_saved">已保存到下载/AME Balance Care/液体平衡</string>
+    <string name="file_save_error">无法保存文件</string>
+</resources>

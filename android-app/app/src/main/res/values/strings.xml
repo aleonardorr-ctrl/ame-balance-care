@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AME Balance Care</string>
+    <string name="file_saved">Guardado en Descargas/AME Balance Care/Balance Hídrico</string>
+    <string name="file_save_error">No se pudo guardar el archivo</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AME Balance Care</string>
+    <string name="file_saved">Saved in Downloads/AME Balance Care/Fluid Balance</string>
+    <string name="file_save_error">The file could not be saved</string>
+</resources>

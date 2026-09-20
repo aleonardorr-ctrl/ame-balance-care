@@ -43,3 +43,15 @@ yarn-error.log*
 /android-app/.gradle/
 /android-app/build/
 /android-app/app/build/
+/android-app/release/
+/android-app/upload-keystore.properties
+/android-app/*.jks
+/android-app/*.keystore
+/android-app/keys/
+/android-app/local.properties
+*.apk
+*.aab
+*.jks
+*.keystore
+*.zip
+*.tsbuildinfo
