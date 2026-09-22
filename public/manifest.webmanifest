@@ -6,9 +6,18 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "orientation": "any",
   "background_color": "#f6f8f6",
   "theme_color": "#103e4b",
   "lang": "es",
+  "categories": ["medical", "productivity", "utilities"],
+  "prefer_related_applications": false,
+  "launch_handler": { "client_mode": "navigate-existing" },
+  "shortcuts": [
+    { "name": "Nuevo balance", "short_name": "Nuevo balance", "url": "/#registro", "icons": [{ "src": "/app-icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Historial", "short_name": "Historial", "url": "/#acumulado", "icons": [{ "src": "/app-icon-192.png", "sizes": "192x192", "type": "image/png" }] }
+  ],
   "icons": [
     { "src": "/app-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
     { "src": "/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }

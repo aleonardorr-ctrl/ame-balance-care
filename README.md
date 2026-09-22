@@ -32,6 +32,8 @@ npm test
 
 La PWA incluye `manifest.webmanifest`, iconos instalables y un service worker para caché sin conexión.
 
+En Windows se instala directamente desde Microsoft Edge o Google Chrome y se abre como una aplicación independiente. Consulta [WINDOWS_RELEASE.md](WINDOWS_RELEASE.md) para las pruebas y la preparación de Microsoft Store.
+
 ## Android
 
 El proyecto Android se encuentra en `android-app/` y requiere Android SDK 36.
@@ -42,6 +44,8 @@ cd android-app
 ```
 
 La compilación de producción debe firmarse con una clave de carga privada. Los archivos de claves, contraseñas, configuraciones locales y binarios generados están excluidos del repositorio.
+
+La aplicación completa es gratuita: no contiene suscripciones, publicidad ni compras integradas. La preparación de AppGallery está documentada en [android-app/APP_GALLERY_RELEASE.md](android-app/APP_GALLERY_RELEASE.md) y el estado general en [PUBLICATION_CHECKLIST.md](PUBLICATION_CHECKLIST.md).
 
 ## Pruebas
 

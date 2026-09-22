@@ -1,4 +1,4 @@
-const CACHE = "ame-balance-care-v1";
+const CACHE = "ame-balance-care-v2";
 const CORE = ["/", "/manifest.webmanifest", "/app-icon-192.png", "/app-icon-512.png", "/favicon.svg", "/Plantilla_Balance_Hidrico_Enfermeria.xlsx"];
 
 self.addEventListener("install", event => {
